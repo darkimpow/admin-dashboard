@@ -1,17 +1,16 @@
-import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { Box } from "@mui/material";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataTeam } from "../../data/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
+import { useTheme} from "@mui/material";
 
 const Team = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const columns = [
-        { field: "id", headerName: "ID" },
+        { field: "id", headerName: "ID", flex: 0.5 },
+        {field: "registrarId", headerName: "Registrar ID"},
         {
             field: "name",
             headerName: "Name",
