@@ -29,11 +29,13 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             onClick={() => setSelected(title)}
             icon={icon}
         >
-            <Typography>{title}</Typography>
-            <Link to={to} />
+            <Link to={to}>
+                <Typography>{title}</Typography>
+            </Link>
         </MenuItem>
     );
 };
+
 
 const Sidebar = () => {
     const theme = useTheme();
@@ -91,13 +93,13 @@ const Sidebar = () => {
 
                     {!isCollapsed && (
                         <Box mb="25px">
-                            <Box display="flex" justifyContent="center" alignItems="center">
+                            <Box display="flex" justifyContent="center" alignItems="center" >
                                 <img
-                                    alt="profile-user"
+                                    alt=""
                                     width="100px"
                                     height="100px"
-                                    src=""
-                                    style={{ cursor: "pointer", borderRadius: "50%" }}
+                                    src='src/assets/selfie.png'
+                                    style={{ cursor: "pointer", borderRadius: "50%"}}
                                 />
                             </Box>
                             <Box textAlign="center">
@@ -107,10 +109,10 @@ const Sidebar = () => {
                                     fontWeight="bold"
                                     sx={{ m: "10px 0 0 0" }}
                                 >
-                                    Ed Roh
+                                    Darkim Powell
                                 </Typography>
                                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                                    VP Fancy Admin
+                                    VP  Admin
                                 </Typography>
                             </Box>
                         </Box>
